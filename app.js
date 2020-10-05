@@ -29,6 +29,8 @@ sql.connect(config).catch((err) => {
   debug(err);
 });
 
+console.log('Prueba');
+
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
