@@ -33,6 +33,8 @@ console.log('Prueba');
 
 console.log('Rama prueba');
 
+console.log('fetch prueba');
+
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
