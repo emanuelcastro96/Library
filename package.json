@@ -1,0 +1,41 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set DEBUG=MyApp && nodemon app.js",
+    "lint": "./node_modules/.bin/eslint"
+  },
+  "author": "EmanuelCastro",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "4.5.2",
+    "chalk": "4.1.0",
+    "debug": "2.6.9",
+    "ejs": "^3.1.5",
+    "express": "4.17.1",
+    "jquery": "3.5.1",
+    "morgan": "1.10.0",
+    "mssql": "^6.2.3",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
