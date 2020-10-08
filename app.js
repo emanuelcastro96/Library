@@ -14,21 +14,18 @@ const nav = require('./src/routes/navRoutes.js');
 const bookRouter = require('./src/routes/bookRoutes')(nav);
 
 const config = {
-  user: 'LAPTOP-FA6PVA5T\\Emanuel',
-  password: '',
+  user: 'Emanuel',
+  password: '42156',
   server: 'LAPTOP-FA6PVA5T\\SQLEXPRESS', // You can use 'localhost\\instance' to connect to named instance
   database: 'Library',
-  port: 1434,
   options: {
     encrypt: false, // Use this if you're on Windows Azure
     trustedConnection: true
   }
 };
-
 sql.connect(config).catch((err) => {
   debug(err);
 });
-
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules/jquery/dist')));
@@ -43,6 +40,6 @@ app.get('/', (req, res) => {
     { title: 'Library', nav });
 });
 
-app.listen(4000, () => {
-  debug(`Listening on port ${chalk.green(4000)}`);
+app.listen(port, () => {
+  debug(`Listening on port ${chalk.green(port)}`);
 });
